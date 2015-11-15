@@ -11,6 +11,8 @@ import FFLoopView
 
 class DemoViewController: UIViewController {
     
+    private var loopView: LoopView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,23 +20,48 @@ class DemoViewController: UIViewController {
     }
     
     private func prepareLoopView() {
-        let loopView = FFLoopView()
-        view.addSubview(loopView)
         
+        // 1. 添加控件
+        loopView = LoopView()
+        view.addSubview(loopView!)
+        
+        // 2. 自动布局
         for v in view.subviews {
             v.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        let viewDictionary: [String : AnyObject] = ["loopView": loopView, "topLayoutGuide": topLayoutGuide]
+        let views: [String : AnyObject] = ["loopView": loopView!, "topLayoutGuide": topLayoutGuide]
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[loopView]-0-|",
             options: [],
             metrics: nil,
-            views: viewDictionary))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[topLayoutGuide]-0-[loopView(120)]",
+            views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[topLayoutGuide]-0-[loopView(160)]",
             options: [],
             metrics: nil,
-            views: viewDictionary))
+            views: views))
         
-        loopView.backgroundColor = UIColor.redColor()
+        // 3. 创建数据数组
+        var urls = [NSURL]()
+        var tips = [String]()
+        for i in 1...5 {
+            let fileName = String(format: "%02d.jpg", i)
+            urls.append(NSBundle.mainBundle().URLForResource(fileName, withExtension: nil)!)
+            
+            tips.append("提示信息 --- \(i)")
+        }
+
+        loopView?.showImages(urls, tips: tips)
+    }
+    
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        
+        loopView?.relayoutView()
+    }
+    
+    @IBAction func removeLoopView() {
+        loopView?.removeFromSuperview()
+        loopView?.stopTimer()
+        
+        loopView = nil
     }
 }

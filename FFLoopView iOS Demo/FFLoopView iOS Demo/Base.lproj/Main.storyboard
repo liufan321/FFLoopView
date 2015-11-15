@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CU-2a-zdh">
+                                <rect key="frame" x="248" y="513" width="105" height="30"/>
+                                <state key="normal" title="释放轮播器视图"/>
+                                <connections>
+                                    <action selector="removeLoopView" destination="BYZ-38-t0r" eventType="touchUpInside" id="4RL-3u-M0A"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8CU-2a-zdh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0IY-Wx-WkD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8CU-2a-zdh" secondAttribute="bottom" constant="8" id="hXB-Ip-oEo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="纯代码" id="yZw-T6-qr2"/>
                 </viewController>
@@ -36,22 +49,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-Me-4Rw" customClass="FFLoopView" customModule="FFLoopView">
-                                <rect key="frame" x="0.0" y="20" width="600" height="120"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-Me-4Rw" customClass="LoopView" customModule="FFLoopView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="160"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="9ME-wN-FxZ"/>
+                                    <constraint firstAttribute="height" constant="160" id="4Gw-SD-BwP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZW-hS-5sU" customClass="LoopView" customModule="FFLoopView">
+                                <rect key="frame" x="0.0" y="188" width="600" height="160"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="c1f-f7-TVI"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="DnV-Me-4Rw" secondAttribute="trailing" id="SqR-D3-8Q4"/>
-                            <constraint firstItem="DnV-Me-4Rw" firstAttribute="top" secondItem="tOx-Fj-8bG" secondAttribute="bottom" id="fge-pM-Ms6"/>
-                            <constraint firstItem="DnV-Me-4Rw" firstAttribute="leading" secondItem="UqB-T0-R23" secondAttribute="leading" id="xR6-zt-ahg"/>
+                            <constraint firstItem="DnV-Me-4Rw" firstAttribute="top" secondItem="tOx-Fj-8bG" secondAttribute="bottom" id="DqC-IV-DTf"/>
+                            <constraint firstItem="DnV-Me-4Rw" firstAttribute="leading" secondItem="UqB-T0-R23" secondAttribute="leading" id="Gwr-ds-fDl"/>
+                            <constraint firstAttribute="trailing" secondItem="DnV-Me-4Rw" secondAttribute="trailing" id="KEQ-wf-1Sa"/>
+                            <constraint firstItem="6ZW-hS-5sU" firstAttribute="top" secondItem="DnV-Me-4Rw" secondAttribute="bottom" constant="8" id="SPK-ez-aiz"/>
+                            <constraint firstAttribute="trailing" secondItem="6ZW-hS-5sU" secondAttribute="trailing" id="kAz-OB-f62"/>
+                            <constraint firstItem="6ZW-hS-5sU" firstAttribute="leading" secondItem="UqB-T0-R23" secondAttribute="leading" id="o7G-pr-aFz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Storyboard" id="jfu-bj-ycR"/>
+                    <connections>
+                        <outlet property="loopView1" destination="DnV-Me-4Rw" id="vBn-Eb-8X6"/>
+                        <outlet property="loopView2" destination="6ZW-hS-5sU" id="arO-W5-ZL7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDe-Lt-af4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

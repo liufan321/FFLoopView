@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2939F051BF9397B00A4FA4B /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939EFB1BF9397B00A4FA4B /* 01.jpg */; };
+		C2939F061BF9397B00A4FA4B /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939EFC1BF9397B00A4FA4B /* 02.jpg */; };
+		C2939F071BF9397B00A4FA4B /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939EFD1BF9397B00A4FA4B /* 03.jpg */; };
+		C2939F081BF9397B00A4FA4B /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939EFE1BF9397B00A4FA4B /* 04.jpg */; };
+		C2939F091BF9397B00A4FA4B /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939EFF1BF9397B00A4FA4B /* 05.jpg */; };
+		C2939F0A1BF9397B00A4FA4B /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939F001BF9397B00A4FA4B /* 06.jpg */; };
+		C2939F0B1BF9397B00A4FA4B /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939F011BF9397B00A4FA4B /* 07.jpg */; };
+		C2939F0C1BF9397B00A4FA4B /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939F021BF9397B00A4FA4B /* 08.jpg */; };
+		C2939F0D1BF9397B00A4FA4B /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939F031BF9397B00A4FA4B /* 09.jpg */; };
+		C2939F0E1BF9397B00A4FA4B /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2939F041BF9397B00A4FA4B /* 10.jpg */; };
 		C2C209851BF8455900A54F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C209841BF8455900A54F2F /* AppDelegate.swift */; };
 		C2C2098A1BF8455900A54F2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C209881BF8455900A54F2F /* Main.storyboard */; };
 		C2C2098C1BF8455900A54F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C2098B1BF8455900A54F2F /* Assets.xcassets */; };
@@ -47,6 +57,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C2939EFB1BF9397B00A4FA4B /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		C2939EFC1BF9397B00A4FA4B /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		C2939EFD1BF9397B00A4FA4B /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		C2939EFE1BF9397B00A4FA4B /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		C2939EFF1BF9397B00A4FA4B /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		C2939F001BF9397B00A4FA4B /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		C2939F011BF9397B00A4FA4B /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		C2939F021BF9397B00A4FA4B /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		C2939F031BF9397B00A4FA4B /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		C2939F041BF9397B00A4FA4B /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		C2C209811BF8455900A54F2F /* FFLoopView iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFLoopView iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C209841BF8455900A54F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C209891BF8455900A54F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +76,6 @@
 		C2D3A52E1BF8464400E8A935 /* FFLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFLoopView.h; sourceTree = "<group>"; };
 		C2D3A52F1BF8464400E8A935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D3A5301BF8464400E8A935 /* FFLoopView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FFLoopView.xcodeproj; sourceTree = "<group>"; };
-		C2D3A5341BF8464400E8A935 /* FFLoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoopView.swift; sourceTree = "<group>"; };
 		C2D3A53B1BF846E700E8A935 /* DemoSBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSBViewController.swift; sourceTree = "<group>"; };
 		C2D3A53D1BF846F800E8A935 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2939EFA1BF9397B00A4FA4B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C2939EFB1BF9397B00A4FA4B /* 01.jpg */,
+				C2939EFC1BF9397B00A4FA4B /* 02.jpg */,
+				C2939EFD1BF9397B00A4FA4B /* 03.jpg */,
+				C2939EFE1BF9397B00A4FA4B /* 04.jpg */,
+				C2939EFF1BF9397B00A4FA4B /* 05.jpg */,
+				C2939F001BF9397B00A4FA4B /* 06.jpg */,
+				C2939F011BF9397B00A4FA4B /* 07.jpg */,
+				C2939F021BF9397B00A4FA4B /* 08.jpg */,
+				C2939F031BF9397B00A4FA4B /* 09.jpg */,
+				C2939F041BF9397B00A4FA4B /* 10.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		C2C209781BF8455900A54F2F = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +132,7 @@
 				C2D3A53D1BF846F800E8A935 /* DemoViewController.swift */,
 				C2D3A53B1BF846E700E8A935 /* DemoSBViewController.swift */,
 				C2C209881BF8455900A54F2F /* Main.storyboard */,
+				C2939EFA1BF9397B00A4FA4B /* images */,
 				C2C2098B1BF8455900A54F2F /* Assets.xcassets */,
 				C2C2098D1BF8455900A54F2F /* LaunchScreen.storyboard */,
 				C2C209901BF8455900A54F2F /* Info.plist */,
@@ -134,7 +171,6 @@
 		C2D3A5331BF8464400E8A935 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				C2D3A5341BF8464400E8A935 /* FFLoopView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -215,8 +251,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2939F0E1BF9397B00A4FA4B /* 10.jpg in Resources */,
+				C2939F0B1BF9397B00A4FA4B /* 07.jpg in Resources */,
+				C2939F071BF9397B00A4FA4B /* 03.jpg in Resources */,
+				C2939F0C1BF9397B00A4FA4B /* 08.jpg in Resources */,
+				C2939F061BF9397B00A4FA4B /* 02.jpg in Resources */,
+				C2939F091BF9397B00A4FA4B /* 05.jpg in Resources */,
+				C2939F0A1BF9397B00A4FA4B /* 06.jpg in Resources */,
+				C2939F0D1BF9397B00A4FA4B /* 09.jpg in Resources */,
 				C2C2098F1BF8455900A54F2F /* LaunchScreen.storyboard in Resources */,
 				C2C2098C1BF8455900A54F2F /* Assets.xcassets in Resources */,
+				C2939F081BF9397B00A4FA4B /* 04.jpg in Resources */,
+				C2939F051BF9397B00A4FA4B /* 01.jpg in Resources */,
 				C2C2098A1BF8455900A54F2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "FFLoopView iOS Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joyios.FFLoopView-iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "FFLoopView iOS Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joyios.FFLoopView-iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

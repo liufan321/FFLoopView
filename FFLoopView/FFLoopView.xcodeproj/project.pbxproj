@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2939EF91BF9316F00A4FA4B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2939EF81BF9316F00A4FA4B /* UIView+Layout.swift */; };
 		C2C209A41BF8457000A54F2F /* FFLoopView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C209A31BF8457000A54F2F /* FFLoopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2C209AD1BF845BB00A54F2F /* FFLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C209AC1BF845BB00A54F2F /* FFLoopView.swift */; };
+		C2C209AD1BF845BB00A54F2F /* LoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C209AC1BF845BB00A54F2F /* LoopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2939EF81BF9316F00A4FA4B /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		C2C209A01BF8457000A54F2F /* FFLoopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFLoopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C209A31BF8457000A54F2F /* FFLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFLoopView.h; sourceTree = "<group>"; };
 		C2C209A51BF8457000A54F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2C209AC1BF845BB00A54F2F /* FFLoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLoopView.swift; sourceTree = "<group>"; };
+		C2C209AC1BF845BB00A54F2F /* LoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 		C2C209AB1BF8459F00A54F2F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				C2C209AC1BF845BB00A54F2F /* FFLoopView.swift */,
+				C2C209AC1BF845BB00A54F2F /* LoopView.swift */,
+				C2939EF81BF9316F00A4FA4B /* UIView+Layout.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -141,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C209AD1BF845BB00A54F2F /* FFLoopView.swift in Sources */,
+				C2939EF91BF9316F00A4FA4B /* UIView+Layout.swift in Sources */,
+				C2C209AD1BF845BB00A54F2F /* LoopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +251,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FFLoopView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyios.FFLoopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -265,6 +270,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FFLoopView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyios.FFLoopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,6 +297,7 @@
 				C2C209AA1BF8457000A54F2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
