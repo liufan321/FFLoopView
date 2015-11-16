@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6171C18CBE6D2AD43A7F93 /* Pods_FFLoopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA2351DD1266FFF0AEE7564 /* Pods_FFLoopView.framework */; };
 		C2939EF91BF9316F00A4FA4B /* LoopView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2939EF81BF9316F00A4FA4B /* LoopView+Additions.swift */; };
 		C2C209A41BF8457000A54F2F /* FFLoopView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C209A31BF8457000A54F2F /* FFLoopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2C209AD1BF845BB00A54F2F /* LoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C209AC1BF845BB00A54F2F /* LoopView.swift */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14D97E57D5C6D8A52BF4496A /* Pods-FFLoopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFLoopView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFLoopView/Pods-FFLoopView.debug.xcconfig"; sourceTree = "<group>"; };
 		C2939EF81BF9316F00A4FA4B /* LoopView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoopView+Additions.swift"; sourceTree = "<group>"; };
 		C2C209A01BF8457000A54F2F /* FFLoopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFLoopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C209A31BF8457000A54F2F /* FFLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFLoopView.h; sourceTree = "<group>"; };
 		C2C209A51BF8457000A54F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C209AC1BF845BB00A54F2F /* LoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopView.swift; sourceTree = "<group>"; };
 		C2C271891BF96FEF00F3BD34 /* PagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		DB261FEE5F547A58FF6BA179 /* Pods-FFLoopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFLoopView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFLoopView/Pods-FFLoopView.release.xcconfig"; sourceTree = "<group>"; };
+		DBA2351DD1266FFF0AEE7564 /* Pods_FFLoopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFLoopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6171C18CBE6D2AD43A7F93 /* Pods_FFLoopView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF01D725E0DF02861AC74A22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14D97E57D5C6D8A52BF4496A /* Pods-FFLoopView.debug.xcconfig */,
+				DB261FEE5F547A58FF6BA179 /* Pods-FFLoopView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C2C209961BF8457000A54F2F = {
 			isa = PBXGroup;
 			children = (
 				C2C209A21BF8457000A54F2F /* FFLoopView */,
 				C2C209A11BF8457000A54F2F /* Products */,
+				BF01D725E0DF02861AC74A22 /* Pods */,
+				D945E6E95D6A3712CAE6E014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +85,14 @@
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
+		D945E6E95D6A3712CAE6E014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBA2351DD1266FFF0AEE7564 /* Pods_FFLoopView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -87,10 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2C209A81BF8457000A54F2F /* Build configuration list for PBXNativeTarget "FFLoopView" */;
 			buildPhases = (
+				787520F94C11615FB0C0D74B /* Check Pods Manifest.lock */,
 				C2C2099B1BF8457000A54F2F /* Sources */,
 				C2C2099C1BF8457000A54F2F /* Frameworks */,
 				C2C2099D1BF8457000A54F2F /* Headers */,
 				C2C2099E1BF8457000A54F2F /* Resources */,
+				126CE527F456DB99461DD97A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +167,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		126CE527F456DB99461DD97A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFLoopView/Pods-FFLoopView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		787520F94C11615FB0C0D74B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2C2099B1BF8457000A54F2F /* Sources */ = {
@@ -247,6 +306,7 @@
 		};
 		C2C209A91BF8457000A54F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D97E57D5C6D8A52BF4496A /* Pods-FFLoopView.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -266,6 +326,7 @@
 		};
 		C2C209AA1BF8457000A54F2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB261FEE5F547A58FF6BA179 /* Pods-FFLoopView.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;

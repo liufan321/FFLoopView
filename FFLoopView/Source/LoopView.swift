@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 /// 提示视图位置
 ///
@@ -377,11 +378,10 @@ private class LoopViewCell: UICollectionViewCell {
             guard let imageURL = imageURL else {
                 return
             }
-            guard let data = NSData(contentsOfURL: imageURL) else {
-                return
-            }
             
-            imageView?.image = UIImage(data: data)
+            imageView?.sd_setImageWithURL(imageURL,
+                placeholderImage: nil,
+                options: [.RefreshCached, .RetryFailed])
         }
     }
     
