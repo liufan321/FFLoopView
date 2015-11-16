@@ -288,10 +288,10 @@ private extension LoopView {
         pagingView.currentPage = 0
         pagingView.hidesForSinglePage = true
 
-//        pagingView.pageIndicatorTintColor = UIColor.darkGrayColor()
-//        pagingView.currentPageIndicatorTintColor = UIColor.redColor()
+        pagingView.pageIndicatorTintColor = UIColor.whiteColor()
+        pagingView.currentPageIndicatorTintColor = UIColor.redColor()
         
-        pagingView.backgroundColor = UIColor.orangeColor()
+        pagingView.backgroundColor = UIColor.clearColor()
     }
     
     /// 准备提示视图
@@ -302,8 +302,6 @@ private extension LoopView {
         
         tipView.addSubview(tipLabel)
         tipLabel.font = UIFont.systemFontOfSize(14)
-        
-        tipLabel.text = "测试"
         tipLabel.textColor = UIColor.whiteColor()
         
         tipView.disableSubviewsAutoresizing()
@@ -409,7 +407,7 @@ private class LoopViewCell: UICollectionViewCell {
         contentView.disableSubviewsAutoresizing()
         contentView.addConstraints(NSLayoutConstraint.constraints(formats, views: views))
         
-        imageView?.backgroundColor = UIColor.redColor()
+        imageView?.backgroundColor = UIColor.whiteColor()
     }
     
     // MARK: 私有属性

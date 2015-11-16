@@ -19,6 +19,11 @@ public enum FFPagingViewType: Int {
     case Clock
 }
 
+/// 页面半径
+private let SmallDotPageRadius: CGFloat = 1
+/// 当前页面半径
+private let SmallDotCurrentPageRadius: CGFloat = 2
+
 /// 分页视图
 public class PagingView: UIView {
 
@@ -49,7 +54,6 @@ public class PagingView: UIView {
     }
     /// 单页时隐藏
     public var hidesForSinglePage: Bool = true
-    
     /// 其他页号标示颜色
     public var pageIndicatorTintColor: UIColor?
     /// 当前页标示颜色
@@ -95,6 +99,80 @@ public class PagingView: UIView {
     private lazy var currentPageLabel = UILabel()
     /// 分割线标签
     private lazy var sepLabel = UILabel()
+}
+
+// MARK: - 绘制视图
+extension PagingView {
+    public override func drawRect(rect: CGRect) {
+        
+        // 条件检测
+        if numberOfPages <= 0 {
+            return
+        }
+        if numberOfPages == 1 && hidesForSinglePage {
+            return
+        }
+        
+        switch pagingType {
+        case .SmallDot: drawSmallDot(rect)
+        case .Clock: drawClock(rect)
+        case .Text: break
+        }
+    }
+    
+    private func drawClock(rect: CGRect) {
+        let center = CGPoint(x: rect.width * 0.5, y: rect.height * 0.5)
+        let r = min(rect.width, rect.height) * 0.5
+        
+        // 中心点
+        let centerPath = UIBezierPath(ovalInRect: centerRect(center, radius: 1.2))
+        
+        // 总页数
+        let pagePath = UIBezierPath()
+        pagePath.moveToPoint(center)
+        pagePath.addLineToPoint(CGPoint(x: center.x, y: center.y - r * 0.6))
+        
+        pageIndicatorTintColor?.set()
+        centerPath.fill()
+        pagePath.stroke()
+        
+        // 当前页数
+        let currentPagePath = UIBezierPath()
+        currentPagePath.moveToPoint(center)
+        let angle = CGFloat(Double(currentPage + 1) / Double(numberOfPages) * M_PI * 2 - M_PI_2)
+        let x = center.x + r * cos(angle) * 0.8
+        let y = center.y + r * sin(angle) * 0.8
+        currentPagePath.addLineToPoint(CGPoint(x: x, y: y))
+        
+        currentPageIndicatorTintColor?.set()
+        currentPagePath.stroke()
+    }
+    
+    private func drawSmallDot(rect: CGRect) {
+        let width = rect.width
+        let step = width / CGFloat(numberOfPages + 1)
+        let y = rect.height * 0.5
+        var x = step
+        
+        for i in 0..<numberOfPages {
+            
+            let radius = (i == currentPage) ? SmallDotCurrentPageRadius : SmallDotPageRadius
+            let rect = centerRect(CGPoint(x: x, y: y), radius: radius)
+            let path = UIBezierPath(ovalInRect: rect)
+            
+            x += step
+            
+            i == currentPage ? currentPageIndicatorTintColor?.set() : pageIndicatorTintColor?.set()
+            
+            path.fill()
+        }
+    }
+    
+    private func centerRect(center: CGPoint, radius: CGFloat) -> CGRect {
+        let rect = CGRect(origin: center, size: CGSizeZero)
+        
+        return CGRectInset(rect, -radius, -radius)
+    }
 }
 
 // MARK: - 设置视图
