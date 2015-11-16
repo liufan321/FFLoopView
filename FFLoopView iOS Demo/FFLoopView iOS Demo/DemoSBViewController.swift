@@ -30,6 +30,7 @@ class DemoSBViewController: UIViewController {
         loopView1.tipViewPosition = .Split
         loopView1.tipView.backgroundColor = UIColor.brownColor()
         loopView1.tipLabel.font = UIFont.systemFontOfSize(18)
+        loopView1.pagingViewPosition = .Center
         loopView1.showImages(urls, tips: tips)
         
         loopView2.showImages(urls, tips: tips)

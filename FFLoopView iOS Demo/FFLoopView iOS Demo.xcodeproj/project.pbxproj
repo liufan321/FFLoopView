@@ -73,6 +73,9 @@
 		C2C2098B1BF8455900A54F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C2098E1BF8455900A54F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C209901BF8455900A54F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C2718B1BF9888600F3BD34 /* LoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopView.swift; sourceTree = "<group>"; };
+		C2C2718C1BF9888600F3BD34 /* LoopView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoopView+Additions.swift"; sourceTree = "<group>"; };
+		C2C2718D1BF9888600F3BD34 /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		C2D3A52E1BF8464400E8A935 /* FFLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFLoopView.h; sourceTree = "<group>"; };
 		C2D3A52F1BF8464400E8A935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D3A5301BF8464400E8A935 /* FFLoopView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FFLoopView.xcodeproj; sourceTree = "<group>"; };
@@ -171,6 +174,9 @@
 		C2D3A5331BF8464400E8A935 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C2C2718B1BF9888600F3BD34 /* LoopView.swift */,
+				C2C2718C1BF9888600F3BD34 /* LoopView+Additions.swift */,
+				C2C2718D1BF9888600F3BD34 /* PagingView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

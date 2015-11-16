@@ -21,7 +21,7 @@ import UIKit
 /// 分页视图位置
 ///
 /// - None:   无
-/// - Center: 居中
+/// - Center: CollectionView 的中下方，即使包含 TipView 也不会显示在 TipView 中
 /// - Right:  右侧
 @objc public enum PagingViewPosition: Int {
     case None
@@ -49,6 +49,15 @@ public class LoopView: UIView {
     public lazy var tipView: UIView = UIView()
     /// 提示标签
     public lazy var tipLabel: UILabel = UILabel()
+    
+    /// 分页视图位置
+    public var pagingViewPosition: PagingViewPosition = .Right {
+        didSet {
+            remakeConstraints()
+        }
+    }
+    /// 分页视图
+    public lazy var pagingView: PagingView = PagingView() // FFPagingView(type: .Clock)
     
     // MARK: - 构造函数
     override init(frame: CGRect) {
@@ -151,6 +160,9 @@ public class LoopView: UIView {
         imageUrls = urls
         imageTips = tips
         
+        // 总页数
+        pagingView.numberOfPages = urls.count
+        
         // 处理 URL 数组
         if imageUrls?.count > 1 {
             imageUrls?.append(imageUrls![0])
@@ -206,6 +218,7 @@ private extension LoopView {
         
         prepareCollectionView()
         prepareTipView()
+        preparePageView()
         
         remakeConstraints()
     }
@@ -216,7 +229,7 @@ private extension LoopView {
         removeConstraints(currentConstraints)
         currentConstraints.removeAll()
         
-        let views = ["collectionView": collectionView, "tipView": tipView]
+        let views = ["collectionView": collectionView, "tipView": tipView, "pagingView": pagingView]
         var formats: [String]
         
         // 提示视图
@@ -236,10 +249,49 @@ private extension LoopView {
         }
         tipView.hidden = (tipViewPosition == .None)
         
+        // 分页视图
+        switch pagingViewPosition {
+        case .Center:
+            formats += ["H:[pagingView(36)]", "V:[pagingView(36)]"]
+            currentConstraints.append(NSLayoutConstraint(item: pagingView,
+                attribute: .CenterX,
+                relatedBy: .Equal,
+                toItem: collectionView,
+                attribute: .CenterX,
+                multiplier: 1.0,
+                constant: 0))
+            currentConstraints.append(NSLayoutConstraint(item: pagingView,
+                attribute: .Bottom,
+                relatedBy: .Equal,
+                toItem: collectionView,
+                attribute: .Bottom,
+                multiplier: 1.0,
+                constant: 0))
+        case .Right:
+            formats += ["H:[pagingView(36)]-0-|", "V:[pagingView(36)]-0-|"]
+        default: break;
+        }
+        pagingView.hidden = (pagingViewPosition == .None)
+        
         // 安装约束
         disableSubviewsAutoresizing()
-        currentConstraints = NSLayoutConstraint.constraints(formats, metrics: nil, views: views)
+        currentConstraints += NSLayoutConstraint.constraints(formats, views: views)
         addConstraints(currentConstraints)
+    }
+    
+    /// 准备分页视图
+    private func preparePageView() {
+        
+        addSubview(pagingView)
+        
+        pagingView.numberOfPages = 0
+        pagingView.currentPage = 0
+        pagingView.hidesForSinglePage = true
+
+//        pagingView.pageIndicatorTintColor = UIColor.darkGrayColor()
+//        pagingView.currentPageIndicatorTintColor = UIColor.redColor()
+        
+        pagingView.backgroundColor = UIColor.orangeColor()
     }
     
     /// 准备提示视图
@@ -257,7 +309,7 @@ private extension LoopView {
         tipView.disableSubviewsAutoresizing()
         let formats = ["H:|-8-[tipLabel]", "V:|-0-[tipLabel]-0-|"]
         
-        tipView.addConstraints(NSLayoutConstraint.constraints(formats, metrics: nil, views: ["tipLabel": tipLabel]))
+        tipView.addConstraints(NSLayoutConstraint.constraints(formats, views: ["tipLabel": tipLabel]))
     }
     
     private func prepareCollectionView() {
@@ -307,8 +359,7 @@ extension LoopView: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         tipLabel.text = imageTips?[offset]
-        
-        // TODO: - 设置页号
+        pagingView.currentPage = offset % pagingView.numberOfPages
     }
     
     public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -356,7 +407,7 @@ private class LoopViewCell: UICollectionViewCell {
         let formats = ["H:|-0-[imageView]-0-|", "V:|-0-[imageView]-0-|"]
         
         contentView.disableSubviewsAutoresizing()
-        contentView.addConstraints(NSLayoutConstraint.constraints(formats, metrics: nil, views: views))
+        contentView.addConstraints(NSLayoutConstraint.constraints(formats, views: views))
         
         imageView?.backgroundColor = UIColor.redColor()
     }
