@@ -34,10 +34,14 @@ class DemoSBViewController: UIViewController {
         loopView1.tipLabel.font = UIFont.systemFontOfSize(18)
         loopView1.pagingViewPosition = .Center
         loopView1.pagingView.pagingType = .SmallDot
-        loopView1.showImages(urls, tips: tips)
+        loopView1.showImages(urls, tips: tips) { [weak self] index in
+            print("选中了第 \(index) 张图像 \(self?.view)")
+        }
         
         loopView2.pagingView.pagingType = .Clock
-        loopView2.showImages(urls, tips: tips)
+        loopView2.showImages(urls, tips: tips) { [weak self] index in
+            print("选中了第 \(index) 张图像 \(self?.view)")
+        }
     }
     
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {

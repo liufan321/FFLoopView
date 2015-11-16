@@ -1,5 +1,5 @@
 PODS:
-  - FFLoopView (1.0.1):
+  - FFLoopView (1.0.2):
     - SDWebImage
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - FFLoopView
 
 SPEC CHECKSUMS:
-  FFLoopView: 98d7825b31085676aab4f0df0cb524a1ea167ec9
+  FFLoopView: 064c6cfd249d2e28eb9123f3fdd0202ebd833a67
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
 COCOAPODS: 0.39.0

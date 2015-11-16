@@ -32,11 +32,27 @@ import SDWebImage
 
 /// 可重用标识符
 private let LoopViewCellIdentifier = "LoopViewCellIdentifier"
-/// 时钟触发时长，默认 3.0
-private let LoopTimeInterval: NSTimeInterval = 3.0
 
 /**
  图片轮播器视图
+ 
+ * 示例代码
+ 
+ ```
+ loopView.showImages(urls, tips: tips) { [weak self] index in
+    print("选中了第 \(index) 张图像 \(self?.view)")
+ }
+ ```
+ 
+ * 参数
+ 1. urls: 轮播器图像的 URL 数组
+ 2. tips: 每张图片对应的提示信息字符串数组，可以为 nil
+ 3. 完成回调：index 选中图像的索引值
+ 
+ * 重要
+ 1. 完成闭包中的 self 需要使用 `[weak self]` 否则会出现循环引用
+ 2. 如果需要释放轮播器视图，需要先调用 `loopView.stopTimer()` 关闭时钟，否则会出现内存泄漏
+ 3. 如果由于设备旋转需要重新更新轮播器布局，可以调用 `loopView.relayoutView()`
  */
 public class LoopView: UIView {
     
@@ -58,7 +74,7 @@ public class LoopView: UIView {
         }
     }
     /// 分页视图
-    public lazy var pagingView: PagingView = PagingView() // FFPagingView(type: .Clock)
+    public lazy var pagingView: PagingView = PagingView()
     
     // MARK: - 构造函数
     override init(frame: CGRect) {
@@ -80,26 +96,35 @@ public class LoopView: UIView {
     // MARK: 公共函数
     /// 显示图像
     ///
-    /// - parameter urls: 图片 URL 数组
-    /// - parameter tips: 图片描述信息字符串数组，可以为 nil
-    public func showImages(urls: [NSURL], tips: [String]?) {
-        
-        // 准备数据
-        prepareData(urls, tips: tips)
-        
-        if imageUrls?.count <= 1 {
-            return
-        }
-        
-        // 滚动到倒数第二张图片
-        dispatch_async(dispatch_get_main_queue()) {
-            self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: urls.count, inSection: 0),
-                atScrollPosition: .Left,
-                animated: false)
-        }
-        
-        // 开启时钟
-        startTimer()
+    /// - parameter urls:          图片 URL 数组
+    /// - parameter tips:          图片描述信息字符串数组，可以为 nil
+    /// - parameter timeInterval:  (可选)时钟触发时长，默认 5.0
+    /// - parameter selectedImage: (可选)选中图片回调，可以为 nil
+    public func showImages(urls: [NSURL],
+        tips: [String]?,
+        timeInterval: NSTimeInterval = 5.0,
+        selectedImage: ((index: Int) -> ())? = nil) {
+            
+            // 记录回调
+            selectedImageCallBack = selectedImage
+            self.timeInterval = timeInterval
+            
+            // 准备数据
+            prepareData(urls, tips: tips)
+            
+            if imageUrls?.count <= 1 {
+                return
+            }
+            
+            // 滚动到倒数第二张图片
+            dispatch_async(dispatch_get_main_queue()) {
+                self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: urls.count, inSection: 0),
+                    atScrollPosition: .Left,
+                    animated: false)
+            }
+            
+            // 开启时钟
+            startTimer()
     }
     
     /// 停止时钟，释放对象时，需要调用此方法
@@ -114,7 +139,7 @@ public class LoopView: UIView {
             return
         }
         
-        timer = NSTimer(timeInterval: LoopTimeInterval,
+        timer = NSTimer(timeInterval: timeInterval,
             target: self,
             selector: "fireTimer",
             userInfo: nil,
@@ -130,7 +155,9 @@ public class LoopView: UIView {
         collectionView.collectionViewLayout.invalidateLayout()
         
         dispatch_async(dispatch_get_main_queue()) {
+            self.stopTimer()
             self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Left, animated: false)
+            self.startTimer()
         }
     }
     
@@ -178,12 +205,16 @@ public class LoopView: UIView {
     }
     
     // MARK: 私有属性
+    /// 选中图像回调
+    private var selectedImageCallBack: ((index: Int) -> ())?
     /// 图像 URL 数组
     private var imageUrls: [NSURL]?
     /// 图像描述信息
     private var imageTips: [String]?
     /// 定时器
     private var timer: NSTimer?
+    /// 时钟触发时长，默认 5.0
+    private var timeInterval: NSTimeInterval = 5.0
     
     /// collectionView
     private lazy var collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: LoopViewLayout())
@@ -285,6 +316,7 @@ private extension LoopView {
         
         addSubview(pagingView)
         
+        pagingView.userInteractionEnabled = false
         pagingView.numberOfPages = 0
         pagingView.currentPage = 0
         pagingView.hidesForSinglePage = true
@@ -297,9 +329,11 @@ private extension LoopView {
     
     /// 准备提示视图
     private func prepareTipView() {
+        
         addSubview(tipView)
         
         tipView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        tipView.userInteractionEnabled = false
         
         tipView.addSubview(tipLabel)
         tipLabel.font = UIFont.systemFontOfSize(14)
@@ -367,6 +401,13 @@ extension LoopView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         stopTimer()
+    }
+    
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let count = imageUrls?.count > 1 ? imageUrls!.count - 2 : 1
+        
+        selectedImageCallBack?(index: indexPath.item % count)
     }
 }
 

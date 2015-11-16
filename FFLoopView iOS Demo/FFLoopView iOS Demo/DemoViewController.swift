@@ -50,7 +50,9 @@ class DemoViewController: UIViewController {
             tips.append("提示信息 --- \(i)")
         }
 
-        loopView?.showImages(urls, tips: tips)
+        loopView?.showImages(urls, tips: tips) { [weak self] index in
+            print("选中了第 \(index) 张图像 \(self?.view)")
+        }
     }
     
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
