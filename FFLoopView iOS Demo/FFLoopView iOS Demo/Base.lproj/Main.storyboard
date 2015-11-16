@@ -63,11 +63,20 @@
                                     <constraint firstAttribute="height" constant="160" id="c1f-f7-TVI"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-NS-WWk">
+                                <rect key="frame" x="255" y="513" width="90" height="30"/>
+                                <state key="normal" title="更改分页控件"/>
+                                <connections>
+                                    <action selector="changePagingView" destination="bNe-FE-BDE" eventType="touchUpInside" id="iji-w2-HrL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hVF-qn-lV0" firstAttribute="top" secondItem="Ctg-NS-WWk" secondAttribute="bottom" constant="8" id="AlA-7M-AJz"/>
                             <constraint firstItem="DnV-Me-4Rw" firstAttribute="top" secondItem="tOx-Fj-8bG" secondAttribute="bottom" id="DqC-IV-DTf"/>
                             <constraint firstItem="DnV-Me-4Rw" firstAttribute="leading" secondItem="UqB-T0-R23" secondAttribute="leading" id="Gwr-ds-fDl"/>
+                            <constraint firstItem="Ctg-NS-WWk" firstAttribute="centerX" secondItem="UqB-T0-R23" secondAttribute="centerX" id="Htp-bm-usW"/>
                             <constraint firstAttribute="trailing" secondItem="DnV-Me-4Rw" secondAttribute="trailing" id="KEQ-wf-1Sa"/>
                             <constraint firstItem="6ZW-hS-5sU" firstAttribute="top" secondItem="DnV-Me-4Rw" secondAttribute="bottom" constant="8" id="SPK-ez-aiz"/>
                             <constraint firstAttribute="trailing" secondItem="6ZW-hS-5sU" secondAttribute="trailing" id="kAz-OB-f62"/>

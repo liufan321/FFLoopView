@@ -9,6 +9,8 @@
 import UIKit
 import FFLoopView
 
+private var typeValue = 0
+
 class DemoSBViewController: UIViewController {
     
     @IBOutlet weak var loopView1: LoopView!
@@ -42,5 +44,9 @@ class DemoSBViewController: UIViewController {
         
         loopView1.relayoutView()
         loopView2.relayoutView()
+    }
+    
+    @IBAction func changePagingView() {
+        loopView2.pagingView.pagingType = PagingViewType(rawValue: typeValue++ % 3)!
     }
 }

@@ -13,7 +13,7 @@ import UIKit
 /// - Text:     文本，适合任意个数的分页显示
 /// - SmallDot: 小点，适合 5 个以内的分页显示
 /// - Clock:    时钟，适合 4~12 个左右的分页显示
-public enum FFPagingViewType: Int {
+public enum PagingViewType: Int {
     case Text
     case SmallDot
     case Clock
@@ -29,7 +29,12 @@ public class PagingView: UIView {
 
     // MARK: 公共属性
     /// 分页视图类型
-    public var pagingType: FFPagingViewType = .Text
+    public var pagingType: PagingViewType = .Text {
+        didSet {
+            setNeedsDisplay()
+            hiddenLabels()
+        }
+    }
     
     /// 总页数
     public var numberOfPages: Int = 0 {
@@ -42,13 +47,8 @@ public class PagingView: UIView {
     /// 当前页数
     public var currentPage: Int = 0  {
         didSet {
-            
-            switch pagingType {
-            case .SmallDot, .Clock: setNeedsDisplay()
-            case .Text:
-                currentPageLabel.text = "\(currentPage + 1)"
-            }
-            
+            setNeedsDisplay()
+            currentPageLabel.text = "\(currentPage + 1)"
             hiddenLabels()
         }
     }
@@ -103,6 +103,7 @@ public class PagingView: UIView {
 
 // MARK: - 绘制视图
 extension PagingView {
+    
     public override func drawRect(rect: CGRect) {
         
         // 条件检测
