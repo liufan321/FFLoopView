@@ -39,6 +39,17 @@ private let LoopTimeInterval: NSTimeInterval = 3.0
  */
 public class LoopView: UIView {
     
+    /// 提示视图位置
+    public var tipViewPosition: TipViewPosition = .Overlay {
+        didSet {
+            remakeConstraints()
+        }
+    }
+    /// 提示视图
+    public lazy var tipView: UIView = UIView()
+    /// 提示标签
+    public lazy var tipLabel: UILabel = UILabel()
+    
     // MARK: - 构造函数
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -163,10 +174,6 @@ public class LoopView: UIView {
     
     /// collectionView
     private lazy var collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: LoopViewLayout())
-    /// 提示视图
-    private var tipView: UIView?
-    /// 提示标签
-    private var tipLabel: UILabel?
     /// 当前布局数组
     private lazy var currentConstraints = [NSLayoutConstraint]()
     
@@ -198,6 +205,7 @@ private extension LoopView {
         backgroundColor = UIColor.whiteColor()
         
         prepareCollectionView()
+        prepareTipView()
         
         remakeConstraints()
     }
@@ -208,12 +216,48 @@ private extension LoopView {
         removeConstraints(currentConstraints)
         currentConstraints.removeAll()
         
-        let views = ["collectionView": collectionView]
-        let formats = ["H:|-0-[collectionView]-0-|", "V:|-0-[collectionView]-0-|"]
+        let views = ["collectionView": collectionView, "tipView": tipView]
+        var formats: [String]
         
+        // 提示视图
+        switch tipViewPosition {
+        case .Overlay:
+            formats = ["H:|-0-[collectionView]-0-|",
+                "V:|-0-[collectionView]-0-|",
+                "H:|-0-[tipView]-0-|",
+                "V:[tipView(36)]-0-|"]
+        case .Split:
+            formats = ["H:|-0-[collectionView]-0-|",
+                "H:|-0-[tipView]-0-|",
+                "V:|-0-[collectionView]-0-[tipView(36)]-0-|"]
+        default:
+            formats = ["H:|-0-[collectionView]-0-|",
+                "V:|-0-[collectionView]-0-|"]
+        }
+        tipView.hidden = (tipViewPosition == .None)
+        
+        // 安装约束
         disableSubviewsAutoresizing()
+        currentConstraints = NSLayoutConstraint.constraints(formats, metrics: nil, views: views)
+        addConstraints(currentConstraints)
+    }
+    
+    /// 准备提示视图
+    private func prepareTipView() {
+        addSubview(tipView)
         
-        addConstraints(NSLayoutConstraint.constraints(formats, metrics: nil, views: views))
+        tipView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        
+        tipView.addSubview(tipLabel)
+        tipLabel.font = UIFont.systemFontOfSize(14)
+        
+        tipLabel.text = "测试"
+        tipLabel.textColor = UIColor.whiteColor()
+        
+        tipView.disableSubviewsAutoresizing()
+        let formats = ["H:|-8-[tipLabel]", "V:|-0-[tipLabel]-0-|"]
+        
+        tipView.addConstraints(NSLayoutConstraint.constraints(formats, metrics: nil, views: ["tipLabel": tipLabel]))
     }
     
     private func prepareCollectionView() {
@@ -240,7 +284,7 @@ extension LoopView: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(LoopViewCellIdentifier, forIndexPath: indexPath) as! LoopViewCell
         
         cell.imageURL = imageUrls![indexPath.item]
-        tipLabel?.text = imageTips?[indexPath.item]
+        tipLabel.text = imageTips?[indexPath.item]
         
         return cell
     }
@@ -261,6 +305,8 @@ extension LoopView: UICollectionViewDataSource, UICollectionViewDelegate {
                 atScrollPosition: .Left,
                 animated: false)
         }
+        
+        tipLabel.text = imageTips?[offset]
         
         // TODO: - 设置页号
     }

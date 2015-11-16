@@ -20,14 +20,18 @@ class DemoSBViewController: UIViewController {
         // 创建数据数组
         var urls = [NSURL]()
         var tips = [String]()
-        for i in 1...7 {
+        for i in 1...5 {
             let fileName = String(format: "%02d.jpg", i)
             urls.append(NSBundle.mainBundle().URLForResource(fileName, withExtension: nil)!)
             
             tips.append("提示信息 --- \(i)")
         }
         
+        loopView1.tipViewPosition = .Split
+        loopView1.tipView.backgroundColor = UIColor.brownColor()
+        loopView1.tipLabel.font = UIFont.systemFontOfSize(18)
         loopView1.showImages(urls, tips: tips)
+        
         loopView2.showImages(urls, tips: tips)
     }
     
