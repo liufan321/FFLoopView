@@ -1,0 +1,6 @@
+framework module FFLoopView {
+  umbrella header "FFLoopView-umbrella.h"
+
+  export *
+  module * { export * }
+}

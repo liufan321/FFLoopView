@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FFLoopView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Simple images loop view in Swift with custom paging view"
   s.homepage     = "https://github.com/liufan321/FFLoopView"
   s.license      = "MIT"

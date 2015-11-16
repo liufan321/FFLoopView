@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1271617DD1A295E70BF34BCA /* Pods_FFLoopView_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72058E1A770E8F4DF81D9497 /* Pods_FFLoopView_iOS_Demo.framework */; };
+		C2C2719C1BF996D700F3BD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C2719B1BF996D700F3BD34 /* AppDelegate.swift */; };
+		C2C271A31BF996D700F3BD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C271A21BF996D700F3BD34 /* Assets.xcassets */; };
+		C2C271A61BF996D700F3BD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C271A41BF996D700F3BD34 /* LaunchScreen.storyboard */; };
+		C2C271B81BF9974300F3BD34 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271AE1BF9974300F3BD34 /* 01.jpg */; };
+		C2C271B91BF9974300F3BD34 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271AF1BF9974300F3BD34 /* 02.jpg */; };
+		C2C271BA1BF9974300F3BD34 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B01BF9974300F3BD34 /* 03.jpg */; };
+		C2C271BB1BF9974300F3BD34 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B11BF9974300F3BD34 /* 04.jpg */; };
+		C2C271BC1BF9974300F3BD34 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B21BF9974300F3BD34 /* 05.jpg */; };
+		C2C271BD1BF9974300F3BD34 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B31BF9974300F3BD34 /* 06.jpg */; };
+		C2C271BE1BF9974300F3BD34 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B41BF9974300F3BD34 /* 07.jpg */; };
+		C2C271BF1BF9974300F3BD34 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B51BF9974300F3BD34 /* 08.jpg */; };
+		C2C271C01BF9974300F3BD34 /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B61BF9974300F3BD34 /* 09.jpg */; };
+		C2C271C11BF9974300F3BD34 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C271B71BF9974300F3BD34 /* 10.jpg */; };
+		C2C271C41BF997B400F3BD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C271C21BF997B400F3BD34 /* Main.storyboard */; };
+		C2C271C71BF997C900F3BD34 /* DemoSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C271C51BF997C900F3BD34 /* DemoSBViewController.swift */; };
+		C2C271C81BF997C900F3BD34 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C271C61BF997C900F3BD34 /* DemoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72058E1A770E8F4DF81D9497 /* Pods_FFLoopView_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFLoopView_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C9B9840D525C0C854280A5 /* Pods-FFLoopView iOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFLoopView iOS Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFLoopView iOS Demo/Pods-FFLoopView iOS Demo.release.xcconfig"; sourceTree = "<group>"; };
+		C2C271981BF996D700F3BD34 /* FFLoopView iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFLoopView iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C2719B1BF996D700F3BD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2C271A21BF996D700F3BD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2C271A51BF996D700F3BD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2C271A71BF996D700F3BD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C271AE1BF9974300F3BD34 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		C2C271AF1BF9974300F3BD34 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		C2C271B01BF9974300F3BD34 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		C2C271B11BF9974300F3BD34 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		C2C271B21BF9974300F3BD34 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		C2C271B31BF9974300F3BD34 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		C2C271B41BF9974300F3BD34 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		C2C271B51BF9974300F3BD34 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		C2C271B61BF9974300F3BD34 /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		C2C271B71BF9974300F3BD34 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		C2C271C31BF997B400F3BD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2C271C51BF997C900F3BD34 /* DemoSBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSBViewController.swift; sourceTree = "<group>"; };
+		C2C271C61BF997C900F3BD34 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		D58F8181142DEA993F0A71A7 /* Pods-FFLoopView iOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFLoopView iOS Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFLoopView iOS Demo/Pods-FFLoopView iOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2C271951BF996D700F3BD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1271617DD1A295E70BF34BCA /* Pods_FFLoopView_iOS_Demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2376B720B1CA3A3A08B31971 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D58F8181142DEA993F0A71A7 /* Pods-FFLoopView iOS Demo.debug.xcconfig */,
+				93C9B9840D525C0C854280A5 /* Pods-FFLoopView iOS Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2C5F06B53938C050C298A944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72058E1A770E8F4DF81D9497 /* Pods_FFLoopView_iOS_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2C2718F1BF996D700F3BD34 = {
+			isa = PBXGroup;
+			children = (
+				C2C2719A1BF996D700F3BD34 /* FFLoopView iOS Demo */,
+				C2C271991BF996D700F3BD34 /* Products */,
+				2376B720B1CA3A3A08B31971 /* Pods */,
+				2C5F06B53938C050C298A944 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2C271991BF996D700F3BD34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2C271981BF996D700F3BD34 /* FFLoopView iOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2C2719A1BF996D700F3BD34 /* FFLoopView iOS Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C2C2719B1BF996D700F3BD34 /* AppDelegate.swift */,
+				C2C271C51BF997C900F3BD34 /* DemoSBViewController.swift */,
+				C2C271C61BF997C900F3BD34 /* DemoViewController.swift */,
+				C2C271C21BF997B400F3BD34 /* Main.storyboard */,
+				C2C271A21BF996D700F3BD34 /* Assets.xcassets */,
+				C2C271AD1BF9974300F3BD34 /* images */,
+				C2C271A41BF996D700F3BD34 /* LaunchScreen.storyboard */,
+				C2C271A71BF996D700F3BD34 /* Info.plist */,
+			);
+			path = "FFLoopView iOS Demo";
+			sourceTree = "<group>";
+		};
+		C2C271AD1BF9974300F3BD34 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C2C271AE1BF9974300F3BD34 /* 01.jpg */,
+				C2C271AF1BF9974300F3BD34 /* 02.jpg */,
+				C2C271B01BF9974300F3BD34 /* 03.jpg */,
+				C2C271B11BF9974300F3BD34 /* 04.jpg */,
+				C2C271B21BF9974300F3BD34 /* 05.jpg */,
+				C2C271B31BF9974300F3BD34 /* 06.jpg */,
+				C2C271B41BF9974300F3BD34 /* 07.jpg */,
+				C2C271B51BF9974300F3BD34 /* 08.jpg */,
+				C2C271B61BF9974300F3BD34 /* 09.jpg */,
+				C2C271B71BF9974300F3BD34 /* 10.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2C271971BF996D700F3BD34 /* FFLoopView iOS Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2C271AA1BF996D700F3BD34 /* Build configuration list for PBXNativeTarget "FFLoopView iOS Demo" */;
+			buildPhases = (
+				2D84E690B280EF3762F75457 /* Check Pods Manifest.lock */,
+				C2C271941BF996D700F3BD34 /* Sources */,
+				C2C271951BF996D700F3BD34 /* Frameworks */,
+				C2C271961BF996D700F3BD34 /* Resources */,
+				5A0DC292315BF31F1793F735 /* Embed Pods Frameworks */,
+				342F351E3C45D08960C78B43 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FFLoopView iOS Demo";
+			productName = "FFLoopView iOS Demo";
+			productReference = C2C271981BF996D700F3BD34 /* FFLoopView iOS Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2C271901BF996D700F3BD34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = joyios;
+				TargetAttributes = {
+					C2C271971BF996D700F3BD34 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = C2C271931BF996D700F3BD34 /* Build configuration list for PBXProject "FFLoopView iOS Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2C2718F1BF996D700F3BD34;
+			productRefGroup = C2C271991BF996D700F3BD34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2C271971BF996D700F3BD34 /* FFLoopView iOS Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2C271961BF996D700F3BD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C271C11BF9974300F3BD34 /* 10.jpg in Resources */,
+				C2C271BE1BF9974300F3BD34 /* 07.jpg in Resources */,
+				C2C271BA1BF9974300F3BD34 /* 03.jpg in Resources */,
+				C2C271BF1BF9974300F3BD34 /* 08.jpg in Resources */,
+				C2C271B91BF9974300F3BD34 /* 02.jpg in Resources */,
+				C2C271BC1BF9974300F3BD34 /* 05.jpg in Resources */,
+				C2C271BD1BF9974300F3BD34 /* 06.jpg in Resources */,
+				C2C271C41BF997B400F3BD34 /* Main.storyboard in Resources */,
+				C2C271C01BF9974300F3BD34 /* 09.jpg in Resources */,
+				C2C271A61BF996D700F3BD34 /* LaunchScreen.storyboard in Resources */,
+				C2C271A31BF996D700F3BD34 /* Assets.xcassets in Resources */,
+				C2C271BB1BF9974300F3BD34 /* 04.jpg in Resources */,
+				C2C271B81BF9974300F3BD34 /* 01.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D84E690B280EF3762F75457 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		342F351E3C45D08960C78B43 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFLoopView iOS Demo/Pods-FFLoopView iOS Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0DC292315BF31F1793F735 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFLoopView iOS Demo/Pods-FFLoopView iOS Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2C271941BF996D700F3BD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C271C71BF997C900F3BD34 /* DemoSBViewController.swift in Sources */,
+				C2C2719C1BF996D700F3BD34 /* AppDelegate.swift in Sources */,
+				C2C271C81BF997C900F3BD34 /* DemoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2C271A41BF996D700F3BD34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2C271A51BF996D700F3BD34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C2C271C21BF997B400F3BD34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2C271C31BF997B400F3BD34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2C271A81BF996D700F3BD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2C271A91BF996D700F3BD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2C271AB1BF996D700F3BD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D58F8181142DEA993F0A71A7 /* Pods-FFLoopView iOS Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "FFLoopView iOS Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joyios.FFLoopView-iOS-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2C271AC1BF996D700F3BD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C9B9840D525C0C854280A5 /* Pods-FFLoopView iOS Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "FFLoopView iOS Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joyios.FFLoopView-iOS-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2C271931BF996D700F3BD34 /* Build configuration list for PBXProject "FFLoopView iOS Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C271A81BF996D700F3BD34 /* Debug */,
+				C2C271A91BF996D700F3BD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2C271AA1BF996D700F3BD34 /* Build configuration list for PBXNativeTarget "FFLoopView iOS Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C271AB1BF996D700F3BD34 /* Debug */,
+				C2C271AC1BF996D700F3BD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2C271901BF996D700F3BD34 /* Project object */;
+}

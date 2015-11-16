@@ -1,0 +1,6 @@
+framework module Pods_FFLoopView_iOS_Demo {
+  umbrella header "Pods-FFLoopView iOS Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
